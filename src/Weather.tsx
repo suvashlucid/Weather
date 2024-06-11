@@ -75,7 +75,7 @@ const Weather: React.FC = () => {
 
   const fetchWeather = async () => {
     try {
-      const apiKey = import.meta.env.VITE_OPENWEATHERMAP_API_KEY;
+      const apiKey = import.meta.env.VITE_WEATHER_API_KEY;
       const response = await axios.get(
         `https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid=${apiKey}`
       );
