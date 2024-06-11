@@ -1,4 +1,4 @@
-# Logs
+ # Logs
 logs
 *.log
 npm-debug.log*
@@ -6,31 +6,45 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
+
+# Environment Variables
 .env
+
+# Node Modules
 node_modules
+
+# Build Directories
 dist
 dist-ssr
+
+# Local Environment Config
 *.local
-.env.DS_Store
-# Editor directories and files
+
+# macOS Files
+.DS_Store
+
+# Editor Directories and Files
 .vscode/*
 !.vscode/extensions.json
 .idea
-.DS_Store
+
+# Visual Studio Files
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
+
+# Package Managers
 .pnpm-lock.yaml
 .yarn.lock
 pnpm-lock.yaml
 yarn.lock
-.env.DS_Store
+
+# Additional Configurations
 /Users/suvash/Weather-assignment/Weather/.env
-node_modules
-  
- .vscode/*
- .vscode/extensions.json
- .DS_Store
- 
+
+# Duplicate Entries (Corrected)
+/vscode/*
+.vscode/extensions.json
+.DS_Store
