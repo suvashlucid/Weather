@@ -175,7 +175,7 @@ const Weather: React.FC = () => {
               )}
               {forecastData.length > 0 && (
                 <div className="mt-4">
-                  <p className="font-bold">Upcoming 5-hour forecast:</p>
+                  <p className="font-bold"> आगामी ५ घण्टाको पूर्वानुमान:</p>
                   <div className="flex flex-row flex-wrap justify-center space-x-4">
                     {forecastData
                       .slice(1, 6)
