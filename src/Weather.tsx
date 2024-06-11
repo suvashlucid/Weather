@@ -16,6 +16,8 @@ interface ForecastData {
   main: Main;
 }
 
+type TimeoutType = ReturnType<typeof setTimeout>; // New type definition
+
 const ThemeContext = createContext<{
   darkMode: boolean;
   toggleTheme: () => void;
@@ -32,9 +34,7 @@ const Weather: React.FC = () => {
   );
   const [error, setError] = useState<string | null>(null);
   const [searchCity, setSearchCity] = useState<string>("");
-  const [typingTimeout, setTypingTimeout] = useState<NodeJS.Timeout | null>(
-    null
-  );
+  const [typingTimeout, setTypingTimeout] = useState<TimeoutType | null>(null); // Using the new type
   const [darkMode, setDarkMode] = useState<boolean>(false);
 
   const weatherDescriptionMap: {
@@ -83,8 +83,6 @@ const Weather: React.FC = () => {
   const handleSearch = () => setCityName(searchCity);
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) =>
     setSearchCity(e.target.value);
-  // const convertToBikramSambat = (gregorianDate: Date): string =>
-  //   bs.toBik_text(gregorianDate.toISOString().split("T")[0]);
 
   const toggleTheme = () => setDarkMode(!darkMode);
 
