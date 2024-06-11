@@ -22,6 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+pnpm-lock.yaml
+ yarn.lock
 .env.DS_Store
 /Users/suvash/Weather-assignment/Weather/.env
 node_modules
@@ -29,5 +31,4 @@ node_modules
  .vscode/*
  .vscode/extensions.json
  .DS_Store
- pnpm-lock.yaml
- yarn.lock
+ 
