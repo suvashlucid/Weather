@@ -4,8 +4,6 @@ import axios from "axios";
 
 import { FaCloud, FaCloudRain, FaSnowflake, FaSun } from "react-icons/fa";
 
-// const currentDate: Date = new Date();
-
 interface Weather {
   id: number;
   description: string;
@@ -38,13 +36,6 @@ const Weather: React.FC = () => {
     null
   );
   const [darkMode, setDarkMode] = useState<boolean>(false);
-
-  // const cityMap: { [key: string]: string } = {
-  //   पोखरा: "Pokhara",
-  //   काठमाडौं: "Kathmandu",
-  //   विराटनगर: "Biratnagar",
-  //   बेनीघाट: "Bhaktapur",
-  // };
 
   const weatherDescriptionMap: {
     [key: string]: { icon: JSX.Element; label: string };
@@ -103,12 +94,6 @@ const Weather: React.FC = () => {
         className={`p-4 md:p-20 ${darkMode ? "bg-gray-900" : "bg-gray-300"}`}
       >
         <div className="flex justify-between items-center mb-4">
-          {/* <div className="flex items-center">
-            <FaCalendarAlt size={20} className="mr-2" />
-            <span className={`ml-2 ${darkMode ? "text-white" : "text-black"}`}>
-              {convertToBikramSambat(currentDate)}
-            </span>
-          </div> */}
           <h1
             className={`text-2xl md:text-4xl font-bold text-green-500 ${
               darkMode && "text-white"
